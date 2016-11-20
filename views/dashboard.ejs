@@ -25,19 +25,19 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="../../assests/images/android-desktop.png">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="../../assests/images/ios-desktop.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="../../assests/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="../../assests/images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -47,7 +47,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.cyan-light_blue.min.css">
-    <link rel="stylesheet" href="../../assests/styles/styles.css">
+    <link rel="stylesheet" href="styles/ruta-maps.css">
     <style>
     #view-source {
       position: fixed;
@@ -59,6 +59,9 @@
       z-index: 900;
     }
     </style>
+
+
+
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -116,24 +119,11 @@
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
       </div>
-      <main class="mdl-layout__content mdl-color--grey-100" id="map">
-      <!--<div id="map"></div>-->
-      <script>
-          function initMap() {
-            // Create a map object and specify the DOM element for display.
-            var map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: -2.135724, lng:-79.952201},
-              scrollwheel: false,
-              zoom: 15
-            });
-          }
-
-        </script>
+      <main class="mdl-layout__content" id="map-canvas">
 
       </main>
     </div>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVw7sk2Yq3HajI8O90e2uT_4xkmqXEQg&callback=initMap"
-  async defer></script>
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry" type="text/javascript"></script>
+    <script type="text/javascript", src="js/ruta-maps.js"></script>
   </body>
 </html>
